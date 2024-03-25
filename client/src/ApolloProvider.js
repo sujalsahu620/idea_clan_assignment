@@ -7,7 +7,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { setContext } from 'apollo-link-context';
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:4000'
+  uri: 'https://idea-clan-assignment-eight.vercel.app/'
 });
 
 const authLink = setContext(() => {
