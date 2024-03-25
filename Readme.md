@@ -42,3 +42,51 @@
 </li>
    <li>These functionalities are implemented using a combination of Express.js for route handling, MongoDB for data storage, and GraphQL for efficient querying and manipulation of data. The backend architecture ensures data security, scalability, and performance to provide a seamless social media experience for users.</li>
 </ul>
+
+### **To Signup**
+
+<h3>Query</h3>
+```
+mutation Mutation($registerInput: RegisterInput) {
+  register(registerInput: $registerInput) {
+    id
+    email
+    token
+    username
+    createdAt
+  }
+}
+```
+<h3>Variables</h3>
+```
+{
+  "registerInput": {
+    "confirmPassword": "12345678",
+    "email": "sujalsahu@hotmail.com",
+    "password":  "12345678",
+    "username": "sahuji"
+  }
+}
+```
+- Response
+```
+{
+    "data": {
+        "register": {
+            "id": "6601366f0d67200008402350",
+            "email": "sujalsahu@hotmail.com",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MDEzNjZmMGQ2NzIwMDAwODQwMjM1MCIsImVtYWlsIjoic3VqYWxzYWh1QGhvdG1haWwuY29tIiwidXNlcm5hbWUiOiJzYWh1amkiLCJpYXQiOjE3MTEzNTU1MDMsImV4cCI6MTcxMTM1OTEwM30.iLbZgvv4w4cJpjXuOURoG9IkYgJWkvs3r0oiLmKVQ1w",
+            "username": "sahuji",
+            "createdAt": "2024-03-25T08:31:43.363Z"
+        }
+    }
+}
+```
+
+### **To Login**
+
+
+
+
+
+
