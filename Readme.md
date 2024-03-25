@@ -56,9 +56,9 @@
     <li>Likes can be deleted by the respective creator If they are logged in</li>
 </ul>
 
+<hr/>
 
 ### **To Signup**
-<hr/>
 
 - Query
 
@@ -101,6 +101,7 @@ mutation Mutation($registerInput: RegisterInput) {
     }
 }
 ```
+<hr/>
 
 ### **To Login**
 
@@ -137,6 +138,7 @@ mutation Login($username: String!, $password: String!) {
   }
 }
 ```
+<hr/>
 
 ### **Create Post**
 - Query
@@ -170,6 +172,7 @@ mutation CreatePost($body: String!) {
   }
 }
 ```
+<hr/>
 
 ### **Add Comment to Post**
 - Query
@@ -220,6 +223,7 @@ mutation CreatePost($postId: String!, $body: String!) {
 }
 ```
 
+<hr/>
 
 ### **Add Like to Post**
 - Query
@@ -267,6 +271,7 @@ mutation CreatePost($postId: ID!) {
 }
 ```
 
+<hr/>
 
 ### **Get Single  Post**
 - Query
@@ -334,6 +339,7 @@ query GetPost($postId: ID!) {
 ```
 
 
+<hr/>
 
 ### **Get all Post with comment and Likes**
 
@@ -415,6 +421,7 @@ query Query {
 }
 ```
 
+<hr/>
 
 ### **Delete Post**
 - Query
@@ -441,6 +448,7 @@ mutation Mutation($postId: ID!) {
 }
 ```
 
+<hr/>
 
 ### **Delete Comment**
 - Query
@@ -488,6 +496,7 @@ mutation DeleteComment($postId: ID!, $commentId: ID!) {
 }
 ```
 
+<hr/>
 
 ### **Created By Sujal Sahu**
 <a href='https://www.linkedin.com/in/sujalsahu620/'>Linkedin</a>
