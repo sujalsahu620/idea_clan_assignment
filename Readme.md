@@ -15,17 +15,18 @@
 </li>
    <li>Express.js handles user authentication routes, ensuring secure storage of user credentials.
 </li>
-   <li>Passwords are securely hashed using bcrypt to protect user data.
+   <li>Passwords are Encrypted to protect user data.
 </li>
 <li>Users are by default logged in when they signup</li>
 </ul>
 
 <h2>Post Creation:</h2>
 <ul>
-  <li>Registered users can create posts, including text content and possibly media attachments.
+  <li>Registered users can create  text Posts .
 </li>
    <li>Upon creation, posts are stored in MongoDB, allowing for efficient retrieval and management.
 </li>
+  <li>Post can be deleted by the respective creator If they are logged in</li>
 </ul>
 
 <h2>Viewing Other Users' Posts:</h2>
@@ -42,6 +43,7 @@
 </li>
    <li>Comments are associated with specific posts and stored in the database alongside post data.
 </li>
+    <li>Comments can be deleted by the respective creator If they are logged in</li>
 </ul>
 
 <h2>Liking Posts:</h2>
@@ -51,7 +53,9 @@
    <li>Likes are stored as part of the post data, allowing users to view the total number of likes on a particular post.
 </li>
    <li>These functionalities are implemented using a combination of Express.js for route handling, MongoDB for data storage, and GraphQL for efficient querying and manipulation of data. The backend architecture ensures data security, scalability, and performance to provide a seamless social media experience for users.</li>
+    <li>Likes can be deleted by the respective creator If they are logged in</li>
 </ul>
+
 
 ### **To Signup**
 
