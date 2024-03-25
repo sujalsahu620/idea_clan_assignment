@@ -85,6 +85,20 @@ mutation Mutation($registerInput: RegisterInput) {
 
 ### **To Login**
 
+```
+mutation {
+    register(input: {
+        name: "abc",
+        email: "example@gmail.com",
+        password: "abc",
+        role: "admin"
+    }) {
+        message
+        success
+    }
+}
+```
+
 
 
 
