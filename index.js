@@ -1,13 +1,16 @@
 const { ApolloServer, PubSub } = require('apollo-server');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+dotenv.config(); // Load environment variables from .env file
 
 const typeDefs = require('./graphql/typeDefs');
 const resolvers = require('./graphql/resolvers');
-const { MONGODB } = require('./config.js');
+const MONGODB_URI = process.env.MONGODB_URI; // Access MongoDB connection string from environment variables
 
 const pubsub = new PubSub();
 
-const PORT = process.env.port || 4000;
+const PORT = process.env.PORT || 4000; // Corrected to use PORT environment variable
 
 const server = new ApolloServer({
   typeDefs,
@@ -16,7 +19,7 @@ const server = new ApolloServer({
 });
 
 mongoose
-  .connect(MONGODB, { useNewUrlParser: true })
+  .connect(MONGODB_URI, { useNewUrlParser: true })
   .then(() => {
     console.log('MongoDB Connected');
     return server.listen({ port: PORT });
@@ -25,5 +28,5 @@ mongoose
     console.log(`Server running at ${res.url}`);
   })
   .catch(err => {
-    console.error(err)
-  })
+    console.error(err);
+  });
